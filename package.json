@@ -4,5 +4,16 @@
   "version": "0.0.1",
   "main": "dist",
   "repository": "https://github.com/chiel/container-builder-test",
-  "author": "chielkunkels"
+  "author": "chielkunkels",
+  "scripts": {
+    "build": "babel -d dist src",
+    "start": "node dist"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }
