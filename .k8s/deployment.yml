@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: kunkels-site
+  labels:
+    app: kunkels-site
+spec:
+  selector:
+    matchLabels:
+      app: kunkels-site
+  template:
+    metadata:
+      labels:
+        app: kunkels-site
+    spec:
+      containers:
+      - image: gcr.io/kunkels-core/container-builder-test
+        name: site
+        ports:
+        - containerPort: 80
